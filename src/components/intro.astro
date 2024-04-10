@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 import ContentSection from "~/components/content-section.astro";
 ---
 
@@ -7,19 +6,75 @@ import ContentSection from "~/components/content-section.astro";
   title="Streamline your workflows. Expand to new markets. Increase your margins.​"
   id="intro"
 >
-  <img slot="eyebrow"  src="tw-logo.svg" class="size-64 -m-4"  alt="">
-  <Fragment slot="lead">
-    TwoWay uses your <span class="text-primary">interactions with brokers</span> to bring you all your
-    mark-to-markets in <span class="text-primary">real-time</span>
-  </Fragment>
+  <img slot="eyebrow" src="tw-logo.svg" class="-m-4 size-64" alt="" />
 
-  <span class="text-left text-lg" style="margin-top:-32px">
-    <br />
-  ⏱️ Respond <span class="text-primary">faster</span>, and more precisely to brokers, thus growing your business and
-  profitability​
-  <br />
-  🚧 Spot any <span class="text-primary">pricing gaps</span>, as <span class="text-primary">opportunities</span>, pricing issues, or model risks​
-  <br />
-  🤖 <span class="text-primary">Streamline</span> all manual pricing, and trade capture, reducing operational risk​
-  </span>
+  <a
+    type="button"
+    href="https://calendly.com/chirine-bz/30-minutes"
+    target="_blank"
+    class="rounded-lg bg-blue-700 px-6 py-3.5 text-center font-medium text-white text-base hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  >
+    Book a demo</a
+  >
+
+  <div class="p-5 text-center">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-4 md:grid-cols-3 md:gap-6">
+        <div
+          class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow"
+        >
+          <h3 class="mb-4 font-bold tracking-tight text-gray-900 text-xl">
+            KNOW BETTER
+          </h3>
+          <p class="mb-3 font-normal text-gray-700">
+            Get <span class="font-semibold text-primary">100%</span> market interests
+            and prices in <span class="font-semibold text-primary"
+              >Real-time</span
+            >
+          </p>
+          <p class="font-normal text-gray-700">
+            Spot <span class="font-semibold text-primary"
+              >patterns and trends</span
+            > from Message History
+          </p>
+        </div>
+
+        <div
+          class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow"
+        >
+          <h3 class="mb-4 font-bold tracking-tight text-gray-900 text-xl">
+            ACT FASTER
+          </h3>
+          <p class="mb-3 font-normal text-gray-700">
+            Keep your <span class="font-semibold text-primary"
+              >volatility contribution</span
+            > up-to-date, at all times.
+          </p>
+          <p class="font-normal text-gray-700">
+            Trade more, by spotting <span class="font-semibold text-primary"
+              >opportunities</span
+            > before the competition.
+          </p>
+        </div>
+
+        <div
+          class="max-w-sm rounded-lg border border-gray-200 bg-white p-6 shadow"
+        >
+          <h3 class="mb-4 font-bold tracking-tight text-gray-900 text-xl">
+            GET TIME BACK
+          </h3>
+          <p class="mb-3 font-normal text-gray-700">
+            Develop new products and <span class="font-semibold text-primary"
+              >expand to new markets</span
+            >.
+          </p>
+          <p class="font-normal text-gray-700">
+            Differentiate from your competitors and <span
+              class="font-semibold text-primary">increase your margins</span
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </ContentSection>

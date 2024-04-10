@@ -11,8 +11,7 @@ import "~/styles/index.css";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpeg", site);
-const description =
-  "Next-gen solutions <br>for investment bank traders​";
+const description = "Next-gen solutions <br>for investment bank traders​";
 ---
 
 <!doctype html>
@@ -23,7 +22,9 @@ const description =
     <link rel="icon" href="/favicon.png" />
     <meta name="generator" content={generator} />
 
-    <title>TwoWay.finance | Next-gen solutions for investment bank traders​</title>
+    <title>
+      TwoWay.finance | Next-gen solutions for investment bank traders​
+    </title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -34,6 +35,23 @@ const description =
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Google Analytics -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-GPGSR2XGRD"></script>
+    <script type="text/partytown">
+      var host = window.location.hostname;
+      if (host != "localhost") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-GPGSR2XGRD");
+      }
+    </script>
+
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
@@ -42,7 +60,7 @@ const description =
         document.documentElement.dataset.theme = themeSaved;
       } else {
         const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
+          "(prefers-color-scheme: dark)"
         ).matches;
         document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
       }

@@ -1,10 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
-import GitHubCorner from "./github-corner.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -19,13 +15,16 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     <h2
       class="flex flex-col items-center gap-2 self-center sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <img src="logo.svg" class="size-24 text-white md:size-32" alt="">
+      <img src="logo.svg" class="size-24 text-white md:size-32" alt="" />
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
       >
         TwoWay
       </div>
-      <span class="gradient-text text-center font-extrabold tracking-tighter text-4xl">Next-gen solutions <br>for investment bank traders​</span>
+      <span
+        class="text-center font-extrabold tracking-tighter text-[#E1EFFE] text-4xl"
+        >Next-gen solutions <br />for investment bank traders​</span
+      >
     </h2>
   </div>
 </section>

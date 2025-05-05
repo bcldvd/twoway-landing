@@ -6,11 +6,17 @@ import ContentSection from "~/components/content-section.astro";
   title="Streamline your workflows. Expand to new markets. Increase your margins.​"
   id="intro"
 >
-  <img slot="eyebrow" src="tw-logo.svg" class="-m-4 size-64" alt="" />
+  <img
+    slot="eyebrow"
+    src="tw-logo.svg"
+    class="-m-4 size-64"
+    alt=""
+    loading="lazy"
+  />
 
   <a
     type="button"
-    href="https://calendly.com/chirine-bz/30-minutes"
+    href={import.meta.env.PUBLIC_CALENDLY_URL}
     target="_blank"
     class="rounded-lg bg-blue-700 px-6 py-3.5 text-center font-medium text-white text-base hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
   >

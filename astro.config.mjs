@@ -3,6 +3,10 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import { defineConfig } from "astro/config";
+import { loadEnv } from "vite";
+
+// Load environment variables
+const env = loadEnv(process.env.NODE_ENV, process.cwd(), "");
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,6 +14,10 @@ export default defineConfig({
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
+  redirects: {
+    "/demo":
+      env.PUBLIC_CALENDLY_URL || "https://calendly.com/chirine-bz/30-minutes",
+  },
   integrations: [
     sitemap(),
     tailwind(),

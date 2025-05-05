@@ -1,8 +1,10 @@
-export async function GET() {
-  const target = import.meta.env.PUBLIC_CALENDLY_URL;
+export const prerender = false;
 
+export function GET() {
   return new Response(null, {
-    status: 302, // 307 si vous voulez préserver la méthode HTTP
-    headers: { Location: target },
+    status: 302,
+    headers: {
+      Location: import.meta.env.PUBLIC_CALENDLY_URL,
+    },
   });
 }
